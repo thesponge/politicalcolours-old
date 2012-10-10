@@ -1,0 +1,8 @@
+The web application, built on PHP, OpenLayers, Exjs and GeoExt can be downloaded from here. To install it just unzip the file into a web server with PHP Support (we recommend Apache, but you can use any web server with Php support) Using the MS4W distribution is recommended, even the map service will not be used. For identifying a proxy must be setup. If you don't have a proxy, just use this one, which is build with Python. Just drop the file into a cgi-bin web directory (execute permission needed). To make it run install Python (2.7 recommended). The Exjs and Geoext distribution must be installed (unzipped) into the corresponding folders of the web application (search for drop.here.extjs and drop.here.geoext)
+
+The final touches are
+
+Install Geoserver
+Upload data to PostreSql
+Configure Geoserver datastores and layers
+Edit embedded_globals.js, map_globals.js and config.php

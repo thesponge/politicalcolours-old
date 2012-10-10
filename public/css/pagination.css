@@ -1,0 +1,63 @@
+/*
+//Copyright (C) 2012  PoliticalColours.ro - Project of TheSponge.eu Some Rights Reserved.
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
+/* Pagination rules */
+.pagination {
+    clear: both;
+    font-size: 11px;
+    line-height: 11px;
+}
+.pagination ul {
+    padding: 0;
+    margin: 0;
+}
+.pagination li {
+    list-style:none;
+    float: left;
+    margin: 1px;
+}
+.pagination a {
+    color: #c1c1c1 !important;
+}
+.pagination a.box {
+    display: block;
+    margin-right: 5px;
+    border: 1px solid #c1c1c1 !important;
+    background: #f1f1f1;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+}
+.pagination a.box:hover {
+    border: 1px solid #000 !important;
+    color: #000 !important;
+}
+.pagination a.free {
+    padding: 10px;
+    display: block;
+    margin-right: 5px;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+}
+.pagination li.active {
+    display: block;
+    margin-right: 5px;
+    padding: 4px 8px 4px 8px;
+    text-decoration: none;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+}
