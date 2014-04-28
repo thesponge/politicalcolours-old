@@ -6,3 +6,7 @@ Install Geoserver
 Upload data to PostreSql
 Configure Geoserver datastores and layers
 Edit embedded_globals.js, map_globals.js and config.php
+
+Please remember to edit:
+./index.php
+./objects/data.php
