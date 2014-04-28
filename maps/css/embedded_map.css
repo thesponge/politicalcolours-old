@@ -1,0 +1,61 @@
+/*
+//Copyright (C) 2012  PoliticalColours.ro - Project of TheSponge.eu Some Rights Reserved.
+//
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/ 
+.info {
+    padding:3px 5px 3px 5px;
+    font-size: 12px;
+    font-family: verdana, sans-serif;
+    width:300px;
+    word-wrap: break-word;
+}
+
+.infobox {
+    position: absolute !important;
+    left: 0px;
+    bottom: 0px;
+    background-color: #383c4d;
+    opacity: 0.85;
+    filter:alpha(opacity=85);
+    color: white;
+    display: none;
+    z-index: 2000;
+}
+
+.infobox a, .optionbox a:visited { color: #ccf; }
+
+a:visited { color: #00f; }
+.smaller { font-size: 12px; }
+
+.olMap {
+    background-color: #212b36;
+}
+
+.olControlLayerSwitcher .layersDiv {
+    background-color: #383c4d !important;
+    color: white !important;
+
+}
+
+.olControlAttribution {
+    font-size: smaller !important;
+    font-weight: bold !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    position: absolute !important;
+    display: block !important;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    color: #EEE;
+}
