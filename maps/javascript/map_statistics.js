@@ -627,4 +627,11 @@ Ext.onReady(function() {
         },
         mapPanel, accordion]
     });
+    
+    window.onresize = function() {
+        var width = Ext.getBody().getViewSize().width;
+        var height = Ext.getBody().getViewSize().height;
+        
+        main_map.setSize(width, height);
+    }
 });
