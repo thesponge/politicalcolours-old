@@ -2,12 +2,12 @@
 <style type="text/css">* { margin: 0; padding: 0; } </style>
     
 <script type="text/javascript">
-    var site_url        = '<?php echo starfish::config('site_url'); ?>';
-    var proxy_url       = '<?php echo starfish::config('proxy_url'); ?>';
-    var geoserver_url   = '<?php echo starfish::config('geoserver_url'); ?>';
-    var wms_url         = '<?php echo starfish::config('wms_url'); ?>';
-    var wfs_url         = '<?php echo starfish::config('wfs_url'); ?>';
-    var tilecache_url   = '<?php echo starfish::config('tilecache_url'); ?>';
+    var site_url        = '<?php echo starfish::config('_starfish', 'site_url'); ?>';
+    var proxy_url       = '<?php echo starfish::config('_starfish', 'proxy_url'); ?>';
+    var geoserver_url   = '<?php echo starfish::config('_starfish', 'geoserver_url'); ?>';
+    var wms_url         = '<?php echo starfish::config('_starfish', 'wms_url'); ?>';
+    var wfs_url         = '<?php echo starfish::config('_starfish', 'wfs_url'); ?>';
+    var tilecache_url   = '<?php echo starfish::config('_starfish', 'tilecache_url'); ?>';
     
     <?php
     echo "\n";
@@ -31,7 +31,7 @@
 
 <script type="text/javascript" src="{/}libraries/OpenLayers-2.12/OpenLayers.js"></script>
 <script type="text/javascript" src="{/}maps/javascript/embedded_globals.js"></script>
-<script type="text/javascript" src="{/}maps/javascript/<?php echo $map; ?>.js"></script>
+<script type="text/javascript" src="{/}maps/javascript/<?php echo $map; ?>"></script>
     
 <div name="map" id="map" class="map">
     <div name="infobox" id="infobox" class="infobox">

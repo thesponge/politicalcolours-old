@@ -199,12 +199,19 @@ div.olLayerDiv {
    -khtml-user-select: none;
 }
 
-.olControlAttribution {
+.olControlAttribution  {
     font-size: smaller !important;
     font-weight: bold !important;
     bottom: 10px !important;
     right: 10px !important;
     position: absolute !important;
-    display: block !important;
-    text-shadow: black 0.1em 0.1em 0.2em;
+	color: #000 !important;
+    /*text-shadow: black 0.1em 0.1em 0.2em;*/
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.olControlAttribution a {
+	color: #000 !important;
+	white-space: nowrap;
 }

@@ -19,7 +19,7 @@
 <body>
     <?php if (!isset($mode) || $mode != 'simple'): ?>
     <div class="container">
-        <header class="site">
+        <header class="header site">
             <div class="title left">
                 <h1><a href="{/}" class="<?php echo currentPage('/home'); ?>">{site_title} <span>{site_description}</span></a> </h1>
             </div>
@@ -34,7 +34,11 @@
             </div>
             
             <div class="clear"></div>
-            
+		</header>
+	</div>
+		
+    <div class="container shadow">
+        <div class="header site">    
             <div class="submenu">
                 <ul class="horizontal none">
                     <li><a class="<?php echo currentPage('/maps/local'); ?>" href="{/}maps/local/">Local Administration</a></li>
@@ -45,7 +49,7 @@
             </div>
             
             <div class="clear"></div>
-        </header>
+        </div>
         
         <div class="site content">
     <?php endif; ?>

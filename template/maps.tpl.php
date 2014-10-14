@@ -1,15 +1,15 @@
 <?php /* Starfish Framework Template protection */ die(); ?>
 <link rel="stylesheet" type="text/css" href="{/}libraries/ext-3.4.0/resources/css/ext-all.css" />
-<link rel="stylesheet" type="text/css" href="{/}libraries/ext-3.4.0/resources/css/xtheme-access.css" />
+<link rel="stylesheet" type="text/css" href="{/}libraries/ext-3.4.0/resources/css/xtheme-gray.css" />
 <link rel="stylesheet" type="text/css" href="{/}maps/css/mainmap.css" />
 <script type="text/javascript">
-    var site_url = '<?php echo starfish::config('site_url'); ?>';
-    var proxy_url = '<?php echo starfish::config('proxy_url'); ?>';
+    var site_url = '<?php echo starfish::config('_starfish', 'site_url'); ?>';
+    var proxy_url = '<?php echo starfish::config('_starfish', 'proxy_url'); ?>';
     
-    var geoserver_url = '<?php echo starfish::config('geoserver_url'); ?>';
-    var wms_url = '<?php echo starfish::config('wms_url'); ?>';
-    var wfs_url = '<?php echo starfish::config('wfs_url'); ?>';
-    var tilecache_url = '<?php echo starfish::config('tilecache_url'); ?>';
+    var geoserver_url = '<?php echo starfish::config('_starfish', 'geoserver_url'); ?>';
+    var wms_url = '<?php echo starfish::config('_starfish', 'wms_url'); ?>';
+    var wfs_url = '<?php echo starfish::config('_starfish', 'wfs_url'); ?>';
+    var tilecache_url = '<?php echo starfish::config('_starfish', 'tilecache_url'); ?>';
 </script>
 <script type="text/javascript" src="{/}maps/javascript/scripts.js"></script>
 

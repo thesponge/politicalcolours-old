@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Require the needed files
+// --> The starfish folder is to be downloaded from https://github.com/cristidraghici/starfish
 include('../starfish/starfish.php');
 
 // The configuration
@@ -73,42 +74,40 @@ on('get', '/feedback*', function(){
 // Integration
 function integration() {
     setVar('currentPage', '/integration');
-    
+	
     // The embed list
     $list = array();
     $files = starfish::obj('files')->all('./maps/javascript/');
     foreach ($files['files'] as $key=>$value)
     {
-        $value = substr($value, strlen('./maps/javascript/'), -3);
-        
         if (substr($value, 0, 6) == 'embed_')
         {
             $list[ base64_encode($value) ] = str_replace(array('embed_', '_'), array('', ' '), $value);
         }
     }
-    
+	
     // The code
     if (
-        strlen( get('map') ) > 0 &&
-        is_numeric( get('height') ) &&
-        is_numeric( get('width') )
+        strlen( post('map') ) > 0 &&
+        is_numeric( post('height') ) &&
+        is_numeric( post('width') )
     )
     {
-        $code = '&lt;iframe seamless="seamless" scrolling="no" frameboder="0" style="width: '.get('width').'px; height: '.get('height').'px;" src="'.starfish::config('site_url').'embed/'.get('map').'">&lt;/iframe&gt;';
+        $code = '&lt;iframe seamless="seamless" scrolling="no" frameboder="0" style="width: '.post('width').'px; height: '.post('height').'px;" src="'.starfish::config('_starfish', 'site_url').'embed/'.post('map').'">&lt;/iframe&gt;';
     }
     else
     {
         $code = 'This is the area where the integration code will be shown.';
     }
     
-    if (!is_numeric( get('height') )) { $height = 300; } else { $height = get('height'); }
-    if (!is_numeric( get('width') )) { $width = 300; } else { $width = get('width'); }
+    if (!is_numeric( post('height') )) { $height = 300; } else { $height = post('height'); }
+    if (!is_numeric( post('width') )) { $width = 300; } else { $width = post('width'); }
     
     echo s::obj('tpl')->view('header');
     echo s::obj('tpl')->view('integration', array(
         'list'      => $list,
         
-        'current'   => get('map'),
+        'current'   => post('map'),
         'width'     => $width,
         'height'    => $height,
         
@@ -151,7 +150,7 @@ on('get', '/loader', function() {
     echo s::obj('tpl')->view('maps', array('mode'=>'local'));
     echo s::obj('tpl')->view('footer', array('mode'=>'simple'));
 });
-on('get', '/loader/::alpha', function($map) {
+on('get', '/loader/:alpha', function($map) {
     echo s::obj('tpl')->view('header', array('mode'=>'simple'));
     echo s::obj('tpl')->view('maps', array('mode'=>$map));
     echo s::obj('tpl')->view('footer', array('mode'=>'simple'));
@@ -161,10 +160,10 @@ on('get', '/loader/::alpha', function($map) {
 on('get', '/embed', function() {
     exit;
 });
-on('get', '/embed/::alpha', function($map) {
+on('get', '/embed/:alpha', function($map) {
     $file = base64_decode($map);
-    
-    if (file_exists('maps/javascript/'.$file.'.js'))
+	
+    if (file_exists('./maps/javascript/'.$file))
     {
         echo s::obj('tpl')->view('header', array('mode'=>'simple'));
         echo s::obj('tpl')->view('embed', array('map'=>$file));

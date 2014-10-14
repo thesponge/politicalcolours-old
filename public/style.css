@@ -1,7 +1,7 @@
 /** Html Elements */
 html, body
 {
-    background: #f1f1f1;
+    background: #fff;
     margin: 0 !important;
     padding: 0 !important;
     text-align: center;
@@ -35,6 +35,12 @@ a:hover {
     float: left;
 }
 
+.shadow {
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(170,170,170,1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(170,170,170,1);
+	box-shadow: 10px 10px 5px 0px rgba(170,170,170,1);
+}
+
 ul.horizontal li {
     float: left;
 }
@@ -58,15 +64,15 @@ ul.none li {
 }
 
 /** Header */
-header.site .title,
-header.site .title a {
+.header.site .title,
+.header.site .title a {
     color: #4f556c;
     text-transform: uppercase;
 }
-header.site .title span {
+.header.site .title span {
     color: #8088a4;
 }
-header.site .title h1 {
+.header.site .title h1 {
     font-size: 18px;
     margin-top: 20px;
     
@@ -77,21 +83,21 @@ header.site .title h1 {
 	-moz-transition: all 0.08s ease-out;		/* Firefox */
 	-o-transition: all 0.08s ease-out;		/* Opera */
 }
-header.site a {
+.header.site a {
     text-decoration: none;
 }
 
 /* menu common */
-header.site .menu a,
-header.site .submenu a {
+.header.site .menu a,
+.header.site .submenu a {
     display: block;
 }
 
 /* menu */
-header.site .menu li {
+.header.site .menu li {
     margin-left: 5px;
 }
-header.site .menu a {
+.header.site .menu a {
     display: block;
     padding: 15px 10px 10px 10px;
     font-size: 12px;
@@ -100,37 +106,40 @@ header.site .menu a {
     color: #aaa;
     border-bottom: 1px solid #aaa;
 }
-header.site .menu a.active,
-header.site .menu a:hover {
+.header.site .menu a.active,
+.header.site .menu a:hover {
     border-bottom: 1px solid #000;
     color: #000;
 }
 /* submenu */
-header.site .submenu {
+.header.site .submenu {
     overflow: hidden;
     background: #383C4D;
     margin-top: 10px;
 }
-header.site .submenu li {
+.header.site .submenu li {
     margin-right: 5px;
     padding: 1px 1px 0px 1px;
 }
-header.site .submenu a {
+.header.site .submenu a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
 }
-header.site .submenu a.active,
-header.site .submenu a:hover {
+.header.site .submenu a.active,
+.header.site .submenu a:hover {
     color: #383C4D;
-    background: #fff;
+    background: #e6e6e6;
 }
 
 /** Content */
 .content.site {
     overflow: hidden;
     padding: 10px;
-    background: #fff;
+    background: #e6e6e6;
+    border: 1px solid #383C4D;
+	border-top: 0;
+	border-bottom: 0;
 }
 
 .content.site p {
@@ -158,7 +167,15 @@ header.site .submenu a:hover {
     margin-top: 25px;
 }
 
+.x-toolbar {
+	background-image: url("x-toolbar-bg.gif") !important;
+}
+
+
 /** Footer */
 footer.site {
-    margin: 20px 0;
+    padding: 20px 10px;
+    background: #e6e6e6;
+    border: 1px solid #383C4D;
+	border-top: 0;
 }
