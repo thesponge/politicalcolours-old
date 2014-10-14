@@ -1,0 +1,217 @@
+body {
+	font-family: tahoma,arial,verdana,sans-serif;
+	padding:20px;
+    padding-top:5px;
+    font-size:13px;
+    text-align: left !important;
+}
+p {
+	margin-bottom:15px;
+}
+h1 {
+	font-size:large;
+	margin-bottom:20px;
+}
+h2 {
+	font-size:14px;
+    color:#333;
+    font-weight:bold;
+    margin:10px 0;
+}
+pre.code{
+	background: #F8F8F8;
+	border: 1px solid #e8e8e8;
+	padding:10px;
+	margin:10px;
+	margin-left:0px;
+	border-left:5px solid #e8e8e8;
+	font-size: 12px !important;
+	line-height:14px !important;
+}
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    top:10px;
+    width:250px;
+    z-index:20000;
+}
+.x-grid3-row-body p {
+    margin:5px 5px 10px 5px !important;
+}
+.search_clear { 
+  background-image: url("images/view_previous_off.png") !important;
+  background-repeat: no-repeat !important;
+  width:  18px !important;
+  height: 18px !important;
+}
+.query_map { 
+  background-image: url("images/query_mode_on.png") !important;
+  background-repeat: no-repeat !important;
+  width:  18px !important;
+  height: 18px !important;
+}
+.zoom_in_action
+{
+	background: no-repeat;
+	margin:0px 0px 0px 0px !important;
+	height:18px !important;
+	background-image: url("images/mActionZoomIn.png") !important;
+}
+.zoom_out_action 
+{
+	margin:0px 0px 0px 0px !important;
+	height:18px !important;
+	background-image: url("images/mActionZoomOut.png") !important;
+}
+.pan_map_action 
+{
+	margin:0px 0px 0px 0px !important;
+	height:18px !important;
+	background-image: url("images/mActionPan.png") !important;
+}
+.zoom_extent_action
+{
+	margin:0px 0px 0px 0px !important;
+	height:18px !important;
+	background-image: url("images/mActionZoomFullExtent.png") !important;
+}
+.prevon { 
+  background-image: url("images/view_previous_on.png") !important;
+  background-repeat: no-repeat !important;
+  width:  18px !important;
+  height: 18px !important;
+}
+.prevoff { 
+  background-image: url("images/view_previous_off.png") !important;
+  background-repeat: no-repeat !important;
+  width:  18px !important;
+  height: 18px !important;
+}
+.nexton { 
+  background-image: url("images/view_next_on.png") !important;
+  background-repeat: no-repeat !important;
+  width:  18px !important;
+  height: 18px !important;   
+}
+.nextoff { 
+  background-image: url("images/view_next_off.png") !important;
+  background-repeat: no-repeat !important;
+  width:  18px !important;
+  height: 18px !important;
+}
+.olControlZoomBoxActive { 
+   cursor: pointer;
+}
+.olControlZoomBoxInactive { 
+   cursor: default;
+}
+.olControlZoomOutActive { 
+  cursor: pointer;
+}
+.olControlZoomOutInactive { 
+  cursor: default;
+}
+.olDragDownActive {
+  cursor: pointer;
+}
+.olDragDownInactive {
+ cursor: default;
+}
+#infobox {
+    position: absolute; left: 0px;
+    bottom: 0px;
+    background-color: #383c4d;
+    padding: 10px;
+    opacity: 0.85;
+    filter:alpha(opacity=85);
+    color: white;
+    display: none;
+    z-index: 2000;
+}
+
+#infobox a, .optionbox a:visited { color: #ccf; }
+
+a:visited { color: #00f; }
+.smaller { font-size: 12px; }
+
+
+.border-panel {
+	border: 1px solid #D0D0D0;
+	border-bottom: 0;
+}
+.map {
+    position: relative;
+}
+.border-bottom {
+	border-bottom: 1px solid #D0D0D0;
+}
+.red {
+	border: 1px solid red;
+}
+.transparency {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=75);
+	opacity: .75;
+}
+.transparent {
+	background-color: transparent !important;
+	background: transparent !important;
+}
+
+.panelx {
+	width: 200px !important;
+	right: 1px !important;
+	bottom: 0 !important;
+	left: auto !important;
+	top: auto !important;
+    float: right;
+}
+
+.panelxl {
+	width: 200px !important;
+	left: 1px !important;
+	bottom: 0 !important;
+	left: auto !important;
+	top: auto !important;
+    float: left;
+}
+
+.x-grid-cell-inner {
+    height: auto !important;
+    white-space: normal !important;
+}
+
+.localPositionClear { 
+  background-image: url("images/delete.png") !important;
+  background-repeat: no-repeat !important;
+  width:  18px !important;
+  height: 18px !important;
+}
+
+.x-small-editor .x-form-field-wrap .x-form-trigger {
+    height:20px !important;
+}
+
+div.olLayerDiv {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+}
+
+.olControlAttribution  {
+    font-size: smaller !important;
+    font-weight: bold !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    position: absolute !important;
+	color: #000 !important;
+    /*text-shadow: black 0.1em 0.1em 0.2em;*/
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.olControlAttribution a {
+	color: #000 !important;
+	white-space: nowrap;
+}
